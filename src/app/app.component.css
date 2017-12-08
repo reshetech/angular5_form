@@ -1,0 +1,23 @@
+body{
+	color:#504e4f;
+}
+.container{
+	width:500px;
+	margin:30px auto;
+}
+.container input[type='submit'] {
+	background-color:#3169a4;
+	border:0;
+}
+.container pre {
+	background: #f4f5f6;
+	border-left: 0.3rem solid #3169a4;
+	overflow-y: hidden;
+}
+input[type='email']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, textarea:focus, select:focus{
+	border-color:#3169a4;
+}
+.ng-invalid.ng-touched:not(form)  {
+	border: 1px solid red;
+}
+.alert{color:red;}

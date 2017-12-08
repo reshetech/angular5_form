@@ -1,0 +1,30 @@
+<div class="container">
+<h1>Form Car Model</h1>
+	<form (ngSubmit)="onSubmit()" #carModelForm="ngForm">
+		<label>Name</label>
+		<input type="text" name="name" name="name" [(ngModel)]="carModel.name" #trackName="ngModel" required>
+
+		<p class="alert" *ngIf="!trackName.valid && trackName.touched">The name is required</p>
+		<!--Works for #trackName but not for #trackName="ngModel"
+			<pre>{{ trackName.className }}</pre>
+		<br />-->
+		<select name="motor" [(ngModel)]="carModel.motor" required>
+			<option *ngFor="let motor of motors" [value]="motor">{{motor}}</option>
+		</select>
+
+		<br />
+		<label><input type="radio" name="hasSunroof" [(ngModel)]="carModel.hasSunroof" value="true">Has sunroof</label>
+		<label><input type="radio" name="hasSunroof" [(ngModel)]="carModel.hasSunroof" value="false">No sunroof</label>
+
+		<br />
+		<input type="submit" value="Save" [disabled]="!carModelForm.form.valid">
+	</form>
+	<!--<strong>Live update:</strong> <pre>{{ getCurrentModel() }}</pre>
+	<br />-->
+	<strong>CarModelForm.value:</strong> <pre>{{carModelForm.value | json}}</pre>
+	<br />
+	<strong>CarModelForm.valid:</strong> <pre>{{carModelForm.valid}}</pre>
+</div>
+
+
+
