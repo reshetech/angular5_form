@@ -1,6 +1,6 @@
 <div class="container">
 <h1>Form Car Model</h1>
-	<form (ngSubmit)="onSubmit()" #carModelForm="ngForm">
+	<form (ngSubmit)="onSubmit(carModelForm)" #carModelForm="ngForm">
 		<label>Name</label>
 		<input type="text" name="name" name="name" [(ngModel)]="carModel.name" #trackName="ngModel" required>
 

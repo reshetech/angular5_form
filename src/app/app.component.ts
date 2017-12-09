@@ -1,4 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { NgForm } from '@angular/forms';
 
 import { CarModel } from './car-model';
 
@@ -16,8 +18,8 @@ export class AppComponent {
 
 	submitted = false;
 
-	onSubmit(){
-		console.log(this.trackName);
+	onSubmit(f: NgForm){
+		console.log(f);
 		this.submitted = true;
 	}
 
